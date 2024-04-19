@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.19 FATAL_ERROR)
 
 #Project name 
-set(project_name "CUDATemplate")#<TODO> change this to the name of your project 
+set(project_name "EigenCUDA")#<TODO> change this to the name of your project 
 project(${project_name} LANGUAGES CXX C CUDA)  
 
 #toggle between building a shared or static library
@@ -30,6 +30,7 @@ include(GoogleTest)
 
 # Auto-detect GPU architecture
 include("cmake/AutoDetectCudaArch.cmake")
+include("cmake/eigen.cmake")
 
 # CUDA and C++ compiler flags
 set(cxx_flags 
@@ -70,5 +71,4 @@ endif()
 
 enable_testing()
 
-add_subdirectory(CUDALib)
-add_subdirectory(CUDAExec)
+add_subdirectory(EigenCUDA)
