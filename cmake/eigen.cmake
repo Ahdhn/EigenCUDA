@@ -24,8 +24,8 @@ else()
     include(FetchContent)
     FetchContent_Declare(
         eigen
-        GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
-        GIT_TAG tags/3.4.0
+        GIT_REPOSITORY https://gitlab.com/Ahdhn/eigen.git
+        GIT_TAG master
         GIT_SHALLOW TRUE
     )
     FetchContent_GetProperties(eigen)
